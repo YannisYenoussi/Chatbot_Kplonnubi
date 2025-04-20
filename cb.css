@@ -1,0 +1,156 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white;
+    height: 100vh;
+    overflow: hidden;
+    background-image: url('../Image/Background.jpg');
+    background-size: cover; /* L'image couvrira tout l'écran */
+    background-repeat: no-repeat; /* Empêche la répétition */
+    background-position: center; /* Centre l'image */
+}
+
+
+
+/* Header contenant le logo et les liens */
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 50px;
+    height: auto;
+}
+
+.header-links {
+    display: flex;
+    gap: 20px; /* Espacement entre les liens */
+}
+
+.header-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.header-links a:hover {
+    text-decoration: underline;
+    color: #7c76ed;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding: 0 50px;
+}
+
+.text-container {
+    max-width: 50%;
+}
+
+h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+.start-btn {
+    background-color: #fff;
+    color: #111112;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.2em;
+    border-radius: 25px;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.start-btn:hover {
+    background-color: #7c76ed;
+}
+
+.start-btn:active {
+    background-color: #00CED1; /* Couleur de fond en appuyant sur le bouton */
+    color: white; /* Ajustement du texte si nécessaire */
+}
+
+.carousel {
+    width: 40%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column; /* Organise les éléments verticalement */
+}
+
+
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel img {
+    width: 100%;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.carousel-text-container {
+    width: 100%;
+    text-align: center; /* Centre le texte horizontalement */
+    margin-top: 10px; /* Espacement avec le carrousel */
+}
+
+.carousel-text {
+    display: inline-block;
+    font-size: 1.5em;
+    color: white;
+    white-space: nowrap; /* Empêche les retours à la ligne */
+    overflow: hidden; /* Cache le texte en cours d'animation */
+    animation: typing 4s steps(50, end), blink 0.7s step-end infinite;
+    width: 0; /* Débute avec aucune largeur visible */
+}
+
+@keyframes typing {
+    from {
+        width: 0; /* Le texte commence caché */
+    }
+    to {
+        width: 45ch; /* Ajuste à la taille totale du texte */
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent; /* Fait clignoter le curseur */
+    }
+}
+
+
